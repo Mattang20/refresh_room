@@ -42,9 +42,22 @@
 					<a href="#" class="story_btn" style="display:none;"></a>
 				</div>
 			</div>
-			<div id="name-plate" rel="1">
+			<div id="name-plate" rel="5">
 				<div class="plate-area" rel="1">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/20.png'>
+				</div>
+				<div class="plate-area" rel="2">
 					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/105.png'>
+				</div>
+				<div class="plate-area" rel="3">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/180.png'>
+				</div>
+				<div class="plate-area" rel="4">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/200.png'>
+				</div>
+				<div class="plate-area" rel="5">
+					<img class="plate" src='../../12008305/image_sp/ui/refresh_room/name_plate/67.png'>
+				</div>
 			</div>
 			<a id="next" class="next" href="#"></a>
 		</section>
@@ -95,7 +108,6 @@
 							"leg": 0
 						}
 					},
-
 				}
 			};
 			var default_swf = '../../petit_refresh_room_character_swf';
@@ -106,9 +118,9 @@
 				"id": "1",
 				"refresh_room_id": "52",
 				"idol_disp_1": "",
-				"motion1": "joy",
-				"bg_image": "3",
-				"message": "뭐 시발 ",
+				"motion1": "stay",
+				"bg_image": "1",
+				"message": "뭐 시발",
 				"message_window_type": "",
 				"message_arrow_1": "1"
 			}];
@@ -164,12 +176,10 @@
 			image.src = refreshRoom.bg_list[refreshRoom.detail[0].bg_image];
 			//console.log(refreshRoom);
 		})();
-
 		function playText() {
 			if (window.refreshRoom == void 0) return;
 			refreshRoom.dialogue.comment_deferred.resolve();
 		}
-
 		function motion_callback(index, motion) {
 			var motion_end = refreshRoom.dialogue.walking == 0;
 			if (motion.indexOf("in_walk") > -1) {
@@ -189,10 +199,3 @@
 				}
 				refreshRoom.dialogue.motion_wait = false;
 			}
-		}
-	</script>
-	<style>
-	</style>
-</body>
-
-</html>
